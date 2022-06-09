@@ -18,7 +18,7 @@ const Home: NextPage = () => {
           React Component Library
         </h1>
 
-        <Playground component={CircularGauge} componentProps={{ value: 51 }} />
+        <Playground component={CircularGauge} componentProps={{ value: 51, needed: false }} />
       </main>
     </div>
   )

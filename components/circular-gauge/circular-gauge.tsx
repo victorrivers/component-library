@@ -1,5 +1,7 @@
 interface CircularGaugeProps {
     value: number;
+    optional?: number;
+    needed: boolean;
 }
 
 export function CircularGauge(props: CircularGaugeProps): JSX.Element {

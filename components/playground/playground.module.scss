@@ -1,0 +1,38 @@
+.container {
+  min-width: 20rem;
+}
+
+.container-table {
+  padding-top: 2rem;
+}
+
+.table {
+  table-layout: fixed;
+  width: 50rem;
+  border-collapse: collapse;
+  border: 1px solid #62737a;
+
+  thead {
+    text-align: left;
+    background-color: lightgray;
+  }
+
+  th,
+  td {
+    padding: 0.75rem;
+
+    &:first-child {
+      padding-left: 1rem;
+    }
+
+    &:last-child {
+      padding-right: 1rem;
+    }
+  }
+
+  tbody {
+    tr:not(:first-child) {
+      border-top: 1px solid #e8e9ec;
+    }
+  }
+}
