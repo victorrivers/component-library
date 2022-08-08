@@ -16,9 +16,7 @@ const Home: NextPage = () => {
 
 			<main className={styles.main}>
 				<h1 className={styles.title}>React Component Library</h1>
-
-				<Playground component={CodeExercises} componentProps={{}} />
-				{/* <Playground component={CircularGauge} componentProps={{ value: 51 }} /> */}
+				<Playground component={CircularGauge} componentProps={{ value: 51 }} />
 			</main>
 		</div>
 	);

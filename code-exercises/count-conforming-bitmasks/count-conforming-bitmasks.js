@@ -17,10 +17,36 @@ function solution(A, B, C) {
 export default function tests() {
 	// solution(16244239, 13032961, 0);
 	// solution(819399173, 9843471, 0);
-	solution(1073741727, 1073741631, 1073741679);
+	//solution(1073741727, 1073741631, 1073741679);
+
+	const t1 = performance.now();
+
+	let index = 0;
+	const max = Math.pow(2, 30);
+	// while (index <= max) {
+	// 	index++;
+	// }
+
+	const bin = dec2bin(max);
+	const bin2 = dec2bin(1073741823);
+
+	console.log("1073741824");
+	console.log(bin);
+	console.log("1073741823");
+	console.log(bin2);
+	const t2 = performance.now();
+
+	console.log(`Performance: ${t2 - t1}ms`); // 788ms
+}
+
+function dec2bin(dec) {
+	return (dec >>> 0).toString(2);
 }
 
 /*
+
+1073741824
+
 For example, for integers:
 
 A = 11 1111 1111 1111 1111 1111 1001 1111(BIN) = 1,073,741,727,

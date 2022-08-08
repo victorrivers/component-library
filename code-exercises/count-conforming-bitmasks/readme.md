@@ -1,10 +1,12 @@
 # CountConformingBitmasks
 
-## Count 30-bit bitmasks conforming to at least one of three given 30-bit bitmasks.
+Count 30-bit bitmasks conforming to at least one of three given 30-bit bitmasks.
+
+## Task description
 
 ---
 
-In this problem we consider unsigned 30-bit integers, i.e. all integers B such that 0 ≤ B < 230.
+In this problem we consider unsigned 30-bit integers, i.e. all integers B such that 0 ≤ B < 2<sup>30</sup>
 
 We say that integer A conforms to integer B if, in all positions where B has bits set to 1, A has corresponding bits set to 1.
 
@@ -25,4 +27,19 @@ For example, for integers:
 
     A = 11 1111 1111 1111 1111 1111 1001 1111(BIN) = 1,073,741,727,
     B = 11 1111 1111 1111 1111 1111 0011 1111(BIN) = 1,073,741,631, and
-    C = 11 1111 1111 1111 1111 1111 0110
+    C = 11 1111 1111 1111 1111 1111 0110 1111(BIN) = 1,073,741,679,
+
+the function should return 8, since there are 8 unsigned 30-bit integers conforming to A, B or C, namely:
+
+    11 1111 1111 1111 1111 1111 0011 1111(BIN) = 1,073,741,631,
+    11 1111 1111 1111 1111 1111 0110 1111(BIN) = 1,073,741,679,
+    11 1111 1111 1111 1111 1111 0111 1111(BIN) = 1,073,741,695,
+    11 1111 1111 1111 1111 1111 1001 1111(BIN) = 1,073,741,727,
+    11 1111 1111 1111 1111 1111 1011 1111(BIN) = 1,073,741,759,
+    11 1111 1111 1111 1111 1111 1101 1111(BIN) = 1,073,741,791,
+    11 1111 1111 1111 1111 1111 1110 1111(BIN) = 1,073,741,807,
+    11 1111 1111 1111 1111 1111 1111 1111(BIN) = 1,073,741,823.
+
+Write an efficient algorithm for the following assumptions:
+
+    A, B and C are integers within the range [0..1,073,741,823].
