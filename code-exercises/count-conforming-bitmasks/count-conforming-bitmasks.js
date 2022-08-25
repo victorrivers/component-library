@@ -1,46 +1,38 @@
 function solution(A, B, C) {
-	const obj = { 0: A, 1: B, 2: C };
-	const result = {};
+  console.log(A ^ B);
 
-	let min = Math.min(A, B, C);
-	let max = 1073741823;
-	for (let i = 0; i < 3; i++) {
-		for (let j = min; j <= max; j++) {
-			if ((j & obj[i]) === obj[i]) {
-				result[j] = true;
-			}
-		}
-	}
-	return Object.keys(result).length;
+  // const obj = { 0: A, 1: B, 2: C };
+  // const result = {};
+
+  // let min = Math.min(A, B, C);
+  // let max = 1073741823;
+  // for (let i = 0; i < 3; i++) {
+  // 	for (let j = min; j <= max; j++) {
+  // 		if ((j & obj[i]) === obj[i]) {
+  // 			result[j] = true;
+  // 		}
+  // 	}
+  // }
+  // return Object.keys(result).length;
+}
+
+function test(A, B, C, expected) {
+  console.time("PERF => ");
+  const actual = solution(A, B, C);
+  console.timeEnd("PERF => ");
+  if (actual !== expected) {
+    console.log(
+      `TEST FAILED. Expected = ${expected}, Actual = ${actual}. A=${A}, B=${B}, C=${C}`
+    );
+  }
 }
 
 export default function tests() {
-	// solution(16244239, 13032961, 0);
-	// solution(819399173, 9843471, 0);
-	//solution(1073741727, 1073741631, 1073741679);
-
-	const t1 = performance.now();
-
-	let index = 0;
-	const max = Math.pow(2, 30);
-	// while (index <= max) {
-	// 	index++;
-	// }
-
-	const bin = dec2bin(max);
-	const bin2 = dec2bin(1073741823);
-
-	console.log("1073741824");
-	console.log(bin);
-	console.log("1073741823");
-	console.log(bin2);
-	const t2 = performance.now();
-
-	console.log(`Performance: ${t2 - t1}ms`); // 788ms
+  test(1073741727, 1073741631, 1073741679, 8);
 }
 
 function dec2bin(dec) {
-	return (dec >>> 0).toString(2);
+  return (dec >>> 0).toString(2);
 }
 
 /*

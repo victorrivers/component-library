@@ -1,25 +1,34 @@
-# Distinct
+# FrogJmp
 
-Compute number of distinct values in an array.
+Count minimal number of jumps from position X to Y.
 
 ## Task description
 
 ---
 
-Write a function
+A small frog wants to get to the other side of the road. The frog is currently located at position X and wants to get to a position greater than or equal to Y. The small frog always jumps a fixed distance, D.
 
-    function solution(A);
+Count the minimal number of jumps that the small frog must perform to reach its target.
 
-that, given an array A consisting of N integers, returns the number of distinct values in array A.
+Write a function:
 
-For example, given array A consisting of six elements such that:
+    function solution(X, Y, D);
 
-    A[0] = 2    A[1] = 1    A[2] = 1
-    A[3] = 2    A[4] = 3    A[5] = 1
+that, given three integers X, Y and D, returns the minimal number of jumps from position X to a position equal to or greater than Y.
 
-the function should return 3, because there are 3 distinct values appearing in array A, namely 1, 2 and 3.
+For example, given:
+
+    X = 10
+    Y = 85
+    D = 30
+
+the function should return 3, because the frog will be positioned as follows:
+
+after the first jump, at position 10 + 30 = 40
+after the second jump, at position 10 + 30 + 30 = 70
+after the third jump, at position 10 + 30 + 30 + 30 = 100
 
 Write an efficient algorithm for the following assumptions:
 
-    N is an integer within the range [0..100,000];
-    each element of array A is an integer within the range [−1,000,000..1,000,000].
+    X, Y and D are integers within the range [1..1,000,000,000];
+    X ≤ Y.
