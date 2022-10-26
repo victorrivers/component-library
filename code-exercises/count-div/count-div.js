@@ -1,4 +1,4 @@
-export default function solution(A, B, K) {
+function solution(A, B, K) {
 	if (A === B) {
 		if (A % K === 0) {
 			return 1;
@@ -26,4 +26,10 @@ export default function solution(A, B, K) {
 		}
 	}
 	return (lastDivisible - firstDivisible) / K + 1;
+}
+
+export default function test() {
+	console.log("KAKA");
+	const resutl = solution(1, 2, 3);
+	console.log(resutl);
 }

@@ -10,5 +10,6 @@ export function CodeExercises(): JSX.Element {
 			run();
 		}
 	}, []);
+
 	return <code>{"hello"}</code>;
 }
